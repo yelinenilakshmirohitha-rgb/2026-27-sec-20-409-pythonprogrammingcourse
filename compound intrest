@@ -1,0 +1,5 @@
+p = int(input("Enter a Number:"))
+r = int(input("Enter a Number:"))
+T = int(input("Enter a Number:"))
+ci = p * (1 + r / 100) ** T - p
+print(ci)
