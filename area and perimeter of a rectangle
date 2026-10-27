@@ -1,6 +1,0 @@
-a = length
-b = breadth 
-area = a * b
-print(area)
-perimeter = 2 * (a + b)
-print (perimeter)
