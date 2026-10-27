@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Learning Platform</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f2f5fa;
+        }
+
+        header {
+            background: #234e70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: #16324f;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px #ccc;
+        }
+
+        .thumbnail {
+            background: #dcecf7;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            border-radius: 8px;
+        }
+
+        h2, h3 {
+            color: #234e70;
+        }
+
+        button {
+            background: #234e70;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        progress {
+            width: 100%;
+        }
+
+        footer {
+            background: #16324f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .courses {
+                flex-direction: column;
+            }
+
+            .card {
+                width: auto;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>LearnHub</h1>
+    <p>Online Learning Platform for B.Tech Students</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#courses">Courses</a>
+    <a href="#progress">My Progress</a>
+</nav>
+
+<div class="container" id="home">
+
+    <h2>Welcome, First-Year Student!</h2>
+    <p>Learn new skills and improve your technical knowledge.</p>
+
+    <h2>Course Categories</h2>
+    <p>Programming | Mathematics | Web Development | English</p>
+
+    <h2 id="courses">Available Courses</h2>
+
+    <div class="courses">
+
+        <div class="card">
+            <div class="thumbnail">🐍</div>
+            <h3>Python Programming</h3>
+            <p><b>Instructor:</b> Ravi Kumar</p>
+            <p>Learn Python basics, variables, loops and functions.</p>
+
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Understand Python basics</li>
+                <li>Write simple programs</li>
+                <li>Solve coding problems</li>
+            </ul>
+
+            <button onclick="enroll('Python Programming')">
+                Enroll Now
+            </button>
+
+            <p>Progress: 40%</p>
+            <progress value="40" max="100"></progress>
+        </div>
+
+        <div class="card">
+            <div class="thumbnail">💻</div>
+            <h3>Web Development</h3>
+            <p><b>Instructor:</b> Priya Sharma</p>
+            <p>Learn HTML, CSS and basic website design.</p>
+
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Create web pages</li>
+                <li>Style websites using CSS</li>
+                <li>Design responsive layouts</li>
+            </ul>
+
+            <button onclick="enroll('Web Development')">
+                Enroll Now
+            </button>
+
+            <p>Progress: 20%</p>
+            <progress value="20" max="100"></progress>
+        </div>
+
+        <div class="card">
+            <div class="thumbnail">📐</div>
+            <h3>Engineering Mathematics</h3>
+            <p><b>Instructor:</b> Suresh Reddy</p>
+            <p>Understand matrices, calculus and basic mathematics.</p>
+
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Learn matrix operations</li>
+                <li>Understand calculus</li>
+                <li>Solve mathematical problems</li>
+            </ul>
+
+            <button onclick="enroll('Engineering Mathematics')">
+                Enroll Now
+            </button>
+
+            <p>Progress: 60%</p>
+            <progress value="60" max="100"></progress>
+        </div>
+
+        <div class="card">
+            <div class="thumbnail">🎤</div>
+            <h3>Communication Skills</h3>
+            <p><b>Instructor:</b> Anjali Rao</p>
+            <p>Improve English speaking, writing and presentation skills.</p>
+
+            <h4>Learning Objectives</h4>
+            <ul>
+                <li>Improve grammar</li>
+                <li>Develop speaking skills</li>
+                <li>Build confidence</li>
+            </ul>
+
+            <button onclick="enroll('Communication Skills')">
+                Enroll Now
+            </button>
+
+            <p>Progress: 30%</p>
+            <progress value="30" max="100"></progress>
+        </div>
+
+    </div>
+
+    <div id="progress">
+        <h2>My Learning Progress</h2>
+        <p>Keep learning and complete your courses!</p>
+        <progress value="40" max="100"></progress>
+        <p>Overall Progress: 40%</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 LearnHub | Online Learning Platform</p>
+</footer>
+
+<script>
+    function enroll(course) {
+        alert("You enrolled in " + course + "!");
+    }
+</script>
+
+</body>
+</html><a href=""></a>
