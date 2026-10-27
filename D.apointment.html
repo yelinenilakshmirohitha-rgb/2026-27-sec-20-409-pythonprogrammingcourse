@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doctor Appointment Booking</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #f0f9f8;
+    color: #234;
+}
+header {
+    background: #087f8c;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+header p { margin-top: 8px; }
+.container {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 20px;
+}
+h2 {
+    color: #087f8c;
+    margin: 20px 0 15px;
+}
+.doctors {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 200px;
+    box-shadow: 0 4px 12px #0001;
+    border-top: 4px solid #22b8a7;
+}
+.card h3 { color: #087f8c; }
+.card p { margin-top: 10px; }
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #0001;
+}
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8d9d6;
+    border-radius: 8px;
+    outline-color: #22b8a7;
+}
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    background: #087f8c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover { background: #22a99b; }
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #087f8c;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>♡ MediCare Clinic</h1>
+    <p>Your Health, Our Priority</p>
+</header>
+
+<div class="container">
+    <h2>👩‍⚕️ Our Doctors</h2>
+    <div class="doctors">
+        <div class="card">
+            <h3>Dr. Ananya Rao</h3>
+            <p>🩺 Cardiologist</p>
+            <p>Experience: 10 Years</p>
+            <p>Timing: 9 AM - 1 PM</p>
+        </div>
+        <div class="card">
+            <h3>Dr. Rahul Kumar</h3>
+            <p>🩺 Dermatologist</p>
+            <p>Experience: 8 Years</p>
+            <p>Timing: 2 PM - 6 PM</p>
+        </div>
+        <div class="card">
+            <h3>Dr. Priya Sharma</h3>
+            <p>🩺 General Physician</p>
+            <p>Experience: 7 Years</p>
+            <p>Timing: 10 AM - 4 PM</p>
+        </div>
+    </div>
+
+    <h2>📅 Book an Appointment</h2>
+    <form>
+        <label>Patient Name</label>
+        <input type="text" placeholder="Enter your full name" required>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="Enter phone number" required>
+
+        <label>Select Doctor</label>
+        <select required>
+            <option value="">Choose a doctor</option>
+            <option>Dr. Ananya Rao - Cardiologist</option>
+            <option>Dr. Rahul Kumar - Dermatologist</option>
+            <option>Dr. Priya Sharma - General Physician</option>
+        </select>
+
+        <label>Appointment Date</label>
+        <input type="date" required>
+
+        <label>Available Time Slot</label>
+        <select required>
+            <option value="">Choose time</option>
+            <option>9:00 AM - 10:00 AM</option>
+            <option>10:00 AM - 11:00 AM</option>
+            <option>2:00 PM - 3:00 PM</option>
+            <option>4:00 PM - 5:00 PM</option>
+        </select>
+
+        <label>Reason for Visit</label>
+        <input type="text" placeholder="Enter your concern">
+
+        <button type="submit">Book Appointment ✨</button>
+    </form>
+</div>
+
+<footer>
+    <p>© 2026 MediCare Clinic | Stay Healthy 💚</p>
+</footer>
+
+</body>
+</html>
