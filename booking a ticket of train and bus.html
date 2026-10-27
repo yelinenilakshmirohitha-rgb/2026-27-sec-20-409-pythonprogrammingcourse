@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TravelEase Booking</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{background:linear-gradient(135deg,#dbeafe,#fce7f3);padding:20px;color:#334155}
+header{text-align:center;background:linear-gradient(135deg,#4338ca,#9333ea);color:white;padding:25px;border-radius:18px;margin-bottom:20px}
+header h1{margin-bottom:10px}
+.container{max-width:850px;margin:auto}
+.card{background:white;padding:22px;border-radius:16px;margin-bottom:20px;box-shadow:0 5px 18px #cbd5e1}
+h2{color:#4f46e5;margin-bottom:18px}
+form,.grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+label{font-weight:bold;font-size:14px}
+input,select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;margin-top:7px}
+button{background:#6d28d9;color:white;padding:12px 18px;border:0;border-radius:8px;cursor:pointer}
+button:hover{background:#4338ca}
+.full{grid-column:1/-1}
+.service{display:flex;justify-content:space-between;align-items:center;gap:15px;background:#f5f3ff;padding:17px;border-radius:12px;margin:12px 0;flex-wrap:wrap}
+.service h3{color:#6d28d9;margin-bottom:8px}
+.price{color:#059669;font-size:22px;font-weight:bold}
+.seats{display:grid;grid-template-columns:repeat(4,50px);gap:10px;margin-top:15px}
+.seat{background:#dcfce7;text-align:center;padding:12px 0;border-radius:7px;cursor:pointer}
+.seat input{width:auto;margin:0}
+.booked{background:#fecaca;cursor:not-allowed}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{border:1px solid #ddd;padding:12px;text-align:center}
+th{background:#6d28d9;color:white}
+footer{text-align:center;padding:15px;color:#64748b}
+@media(max-width:550px){form,.grid{grid-template-columns:1fr}.full{grid-column:auto}.service{align-items:flex-start}table{font-size:12px}th,td{padding:7px}}
+</style>
+</head>
+<body>
+<header>
+<h1>✈ TravelEase</h1>
+<p>Your Journey, Your Comfort!</p>
+</header>
+<div class="container">
+<section class="card">
+<h2>🔍 Search Your Journey</h2>
+<form onsubmit="event.preventDefault();alert('Journey search submitted!')">
+<label>Source City<input type="text" placeholder="From city" required></label>
+<label>Destination<input type="text" placeholder="To city" required></label>
+<label>Travel Date<input type="date" required></label>
+<label>Transport<select><option>Bus</option><option>Train</option><option>Both</option></select></label>
+<button class="full">Search Tickets</button>
+</form>
+</section>
+<section class="card">
+<h2>🚌 Available Services</h2>
+<div class="service">
+<div><h3>🚌 Express Bus</h3><p>8:00 AM - 12:00 PM</p><p>Seats Available: 18</p></div>
+<div><p class="price">₹450</p><button onclick="choose('Express Bus',450)">Select Bus</button></div>
+</div>
+<div class="service">
+<div><h3>🚆 Superfast Train</h3><p>9:30 AM - 2:30 PM</p><p>Seats Available: 25</p></div>
+<div><p class="price">₹650</p><button onclick="choose('Superfast Train',650)">Select Train</button></div>
+</div>
+</section>
+<section class="card">
+<h2>💺 Choose Your Seat</h2>
+<p>🟩 Available &nbsp; 🟥 Booked</p>
+<div class="seats">
+<label class="seat"><input type="checkbox" name="seat" value="A1"> A1</label>
+<label class="seat"><input type="checkbox" name="seat" value="A2"> A2</label>
+<label class="seat booked"> B1</label><label class="seat booked"> B2</label>
+<label class="seat"><input type="checkbox" name="seat" value="C1"> C1</label>
+<label class="seat"><input type="checkbox" name="seat" value="C2"> C2</label>
+<label class="seat"><input type="checkbox" name="seat" value="D1"> D1</label>
+<label class="seat"><input type="checkbox" name="seat" value="D2"> D2</label>
+</div>
+</section>
+<section class="card">
+<h2>👤 Passenger Details</h2>
+<form id="booking">
+<label>Full Name<input id="name" type="text" required></label>
+<label>Age<input type="number" min="1" max="120" required></label>
+<label>Gender<select required><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></label>
+<label
